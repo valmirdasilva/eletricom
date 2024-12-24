@@ -440,6 +440,7 @@ header .btn:after {
     background-repeat: no-repeat;
     background-position: right;
     padding-bottom: 70px;
+    background-size: cover;
 } 
 .hero-text {
     position: relative;
