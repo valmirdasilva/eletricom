@@ -29,6 +29,33 @@
     </div>
   </div>
   <!-- preloader end -->
+  <!-- Pop-Out -->
+  <div id="popOut" class="modal fade" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content" style="border-radius: 1rem;">
+        <div class="modal-header">
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body text-center">
+          <a href="servico-engenharia.html" target="_blank">
+            <img src="assets/img/popout/1.png" alt="Banner 1" class="img-fluid mb-3" style="border-radius: 20px;">
+          </a>
+          <a href="https://www.tipartner.com.br" target="_blank">
+            <img src="assets/img/popout/2.png" alt="Banner 2" class="img-fluid" style="border-radius: 20px;">
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- JavaScript -->
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const popOut = new bootstrap.Modal(document.getElementById('popOut'));
+      setTimeout(() => popOut.show(), 3000); // Exibe após 3 segundos
+    });
+  </script>
+
   <!-- header -->
   <header id="stickyHeader">
     <div class="container">
@@ -52,12 +79,13 @@
           </ul>
           <!-- Botão original do menu -->
           <a href="servico-engenharia.html">
-            <button class="btn btn-primary" style="margin-left: auto; background-color: #0d6efd!important; color: #fff; border: none;">
+            <button class="btn btn-primary"
+              style="margin-left: auto; background-color: #0d6efd!important; color: #fff; border: none;">
               Serviço Engenharia
             </button>
           </a>
         </nav>
-  
+
         <a href="https://api.whatsapp.com/send?phone=5551995077092">
           <i class="flaticon-smart-phone color-icon"></i>
           <b>(51) 99507-7092</b>
@@ -65,59 +93,68 @@
       </div>
     </div>
   </header>
-  
+
   <!-- Botão flutuante para mobile -->
   <a href="servico-engenharia.html" class="btn-floating-mobile">
     <button class="btn btn-primary">
       Serviço Engenharia
     </button>
   </a>
-  
+
   <style>
     /* Esconde o botão no desktop e exibe no mobile */
     .btn-floating-mobile {
-      display: none; /* Ocultando o botão por padrão */
+      display: none;
+      /* Ocultando o botão por padrão */
       position: fixed;
-      bottom: 20px; /* Ajustado para ficar mais para cima */
+      bottom: 20px;
+      /* Ajustado para ficar mais para cima */
       right: 20px;
-      z-index: 1000; /* Garante que o botão fique sobre outros elementos */
-      animation: pulsar 1.5s infinite; /* Animação pulsante */
+      z-index: 1000;
+      /* Garante que o botão fique sobre outros elementos */
+      animation: pulsar 1.5s infinite;
+      /* Animação pulsante */
     }
-  
+
     @media (max-width: 768px) {
       .btn-floating-mobile {
-        display: block; /* Exibe o botão apenas no mobile */
+        display: block;
+        /* Exibe o botão apenas no mobile */
       }
-  
+
       .btn-floating-mobile .btn-primary {
         background-color: #0d6efd !important;
         color: #fff;
         border: none;
         padding: 12px 20px;
         font-size: 14px;
-        border-radius: 50px; /* Arredonda as bordas do botão */
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra para dar efeito de flutuação */
+        border-radius: 50px;
+        /* Arredonda as bordas do botão */
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        /* Sombra para dar efeito de flutuação */
       }
     }
-  
+
     /* Efeito pulsante */
     @keyframes pulsar {
       0% {
         transform: scale(1);
         opacity: 0.8;
       }
+
       50% {
         transform: scale(1.1);
         opacity: 1;
       }
+
       100% {
         transform: scale(1);
         opacity: 0.8;
       }
     }
   </style>
-  
-  
+
+
   <!-- header end -->
   <section class="hero-section two" style="background-image: url(assets/img/banner.png);">
 
